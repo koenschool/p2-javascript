@@ -25,7 +25,6 @@ const intervalId = setInterval(moveDiv, 16);
     const green = Math.floor(Math.random() * 256);
     const blue = Math.floor(Math.random() * 256);
 
-// using inline variable
       document.getElementById("mydiv").style.background = "rgb(" + red + ", " + green + ", " + blue + ")";
   
   }
