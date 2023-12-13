@@ -1,4 +1,4 @@
-var getal1 = document.getElementById("getal1").value;
+var getal1 = parseInt(document.getElementById("getal1").value);
 
 
 function getal(){
