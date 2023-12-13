@@ -9,7 +9,7 @@ function steen(){
     else if(getal==3){
         document.getElementById("getal").innerHTML =  "jij deed 🪨 en de tegenstander deed ✂️ dus je hebt gewonnen";
     }
- 
+    
 }
 
 function papier(){
