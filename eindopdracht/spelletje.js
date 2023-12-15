@@ -4,7 +4,7 @@ function begin(){
 }
 
 function game(){
-    const tijd = Math.floor(Math.random() * 10000);
+    const tijd = Math.floor(Math.random() * 10000 + 1);
     setTimeout(haalweg, tijd);
     
 }
