@@ -12,13 +12,24 @@ body{
 
 
 #opnieuw{
+    display:flex;
+    justify-content: center;
     color:deepskyblue;
     font-family: monospace;
     background-color:black;
     border-color: deepskyblue;
     font-family:monospace;
+    font-size:xx-large;
 }
 
+#timer{
+    background-color:black;
+    display:flex;
+    justify-content: center;
+    z-index: 2;
+    color:white;
+    font-family: monospace;
+}
 
 #tesnell{
     font-size: large;
@@ -27,12 +38,7 @@ body{
 }
 
 
-#timer{
-    position:absolute;
-    z-index: 2;
-    color:black;
-    font-family: monospace;
-}
+
 
 #rood{
     cursor: wait;
