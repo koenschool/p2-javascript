@@ -9,7 +9,12 @@ var arraywi=["speed","deg","gust"]
 async function fetchinfo(object,type) {
     var response = await fetch(api);
     var json = await response.json();
+    if (object=="weather"){
+    var text=json[object][0].type;
+    }
+    else{
     var text=json[object].type;
+    }
     const stuur = document.createElement("p");
     stuur.innerText = text;
     document.body.appendChild(stuur);
@@ -19,32 +24,27 @@ async function fetchinfo(object,type) {
 
 function update(){
     updatewe();
-    updatema();
-    updatewi();
 }
 
 
+
+
 function updatewe(){
+
     for (i = 0; i < arraywe.length; i++) {
         te1 = arraywe[i];
         fetchinfo("weather",te1);
     }
-
-}
-
-function updatema(){
     for (i = 0; i < arrayma.length; i++) {
         te2 = arrayma[i];
+        te2= "'",te2,"'";
         fetchinfo("main",te2);
     }
-
-}
-function updatewi(){
     for (i = 0; i < arraywi.length; i++) {
         te3 = arraywi[i];
         fetchinfo("wind",te3);
     }
-
+    
 }
 
 
