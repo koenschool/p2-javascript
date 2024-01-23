@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="opdracht8.css">
+    <script defer src="opdracht8.js"></script>
+</head>
+<body>
+    <form id="gebruiker">
+        <label for="geb">Selecteer Gebruiker:</label>
+        <select name="languages" id="geb">
+          <option value="geb1">Gebruiker 1</option>
+          <option value="geb2">Gebruiker 2</option>
+          <option value="geb3">Gebruiker 3</option>
+        </select><br>
+        <div class="saldo">
+        <h1 class="geb">gebruiker1</h1><h1 id="saldogeb1">Huidig Saldo: Euro</h1><br>
+        <h1 class="geb">gebruiker2</h1><h1 id="saldogeb2">Huidig Saldo: Euro</h1><br>
+        <h1 class="geb">gebruiker3</h1><h1 id="saldogeb3">Huidig Saldo: Euro</h1><br>
+        </div>
+        <div class="button">
+        <input type="number" id="number">
+        <button type="button" onclick="storten()">Storten</button>
+        <button type="button" onclick="opnemen()">Opnemen</button><br>
+        </div>
+        <h2>Transactiegeschiedenis</h2>
+        <ul>
+        </ul>
+  </form>
+</body>
+</html>
