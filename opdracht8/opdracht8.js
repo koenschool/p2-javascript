@@ -8,10 +8,10 @@ var number = parseInt(document.getElementById("number").value);
 
 
 
-//functie knop voor storten hier word de gebruiker opgehaald en de transactie test verzonden
+//functie knop voor storten hier word de gebruiker opgehaald en de transactie text verzonden
 function storten(){
     var geb = document.getElementById("geb").value;
-    var number = parseInt(document.getElementById("number").value)
+    var number = parseInt(document.getElementById("number").value);
     const stuur = document.createElement("li");
     stuur.innerText = geb+" Storten:€"+number;
     document.body.appendChild(stuur);
@@ -19,10 +19,10 @@ function storten(){
     saldof();
 }
 
-//functie knop voor opnemen hier word de gebruiker opgehaald en de transactie test verzonden
+//functie knop voor opnemen hier word de gebruiker opgehaald en de transactie text verzonden
 function opnemen(){
     var geb = document.getElementById("geb").value;
-    var number = parseInt(document.getElementById("number").value)
+    var number = parseInt(document.getElementById("number").value);
     const stuur = document.createElement("li");
     //dit is voor als er meer geld probeer word opgenomen dan dat er is
     if(saldo2 < number){
@@ -42,6 +42,7 @@ function opnemen(){
 
 //de functie die de berekeningen doet en het saldo update
 function saldof(){
+    var number = parseInt(document.getElementById("number").value);
     var geb = document.getElementById("geb").value;
     var saldo = document.getElementById("saldo"+geb);
     if(x == "s"){
