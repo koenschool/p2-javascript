@@ -1,5 +1,5 @@
 body{
-    background-color:darkcyan;
+    background-color:black;
     font-family:monospace;
     color:deepskyblue;
     font-size:large;
@@ -21,7 +21,7 @@ input::-webkit-inner-spin-button {
 }
 
 input[type=number] {
-    -moz-appearance: textfield;
+    appearance: textfield;
 }
 
 select{
