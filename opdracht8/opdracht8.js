@@ -1,10 +1,34 @@
-
 //ids ophalen en er vars an maken
 var geb = document.getElementById("geb").value;
+var gebl = document.getElementById("geb").length+1;
 var saldo = document.getElementById("saldo"+geb);
 var saldo2 = 0;
 var number = parseInt(document.getElementById("number").value);
 
+
+setInterval(gebupdate, 10);
+
+
+function gebupdate(){
+    for (let i = 1; i < gebl; i++){
+    yeash = "saldogebruiker"+i;
+    document.getElementById(yeash).style.display = "none";
+    document.getElementById("saldo"+document.getElementById("geb").value).style.display = "inline";
+    }
+
+}
+
+
+
+
+function makeuser(){
+    for (let i = 1; i < gebl; i++){
+        const stuurgeb = document.createElement("h1");
+        stuurgeb.setAttribute("id", "saldogebruiker"+i);
+        stuurgeb.innerText = "Huidig Saldo: €";
+        document.getElementById("users").appendChild(stuurgeb);
+    }
+}
 
 
 
@@ -30,15 +54,12 @@ function opnemen(){
         document.body.appendChild(stuur);
     }
     else{
-        console.log (number);
     stuur.innerText = geb+" Opnemen:€"+number;
     document.body.appendChild(stuur);
     x = "o";
     saldof();
     }
 }
-
-
 
 //de functie die de berekeningen doet en het saldo update
 function saldof(){
@@ -47,10 +68,9 @@ function saldof(){
     var saldo = document.getElementById("saldo"+geb);
     if(x == "s"){
         saldo2 = saldo2 + number;
-        saldo.innerHTML = "Huidig Saldo: "+saldo2+" Euro";
     }
     else if(x == "o"){
-        saldo2 -= number;
-        saldo.innerHTML = "Huidig Saldo: "+saldo2+" Euro";
+        saldo2 -= number;;
     }
+    saldo.innerHTML = `Huidig Saldo: € ${saldo2}`
 }
