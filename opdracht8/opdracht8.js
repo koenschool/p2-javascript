@@ -8,7 +8,7 @@ var number = parseInt(document.getElementById("number").value);
 
 setInterval(gebupdate, 10);
 
-
+//dit is de update functie die bijhoud welke gebruiker geselecteerd is en weizigd op basis van dat de display style van de h1 tags
 function gebupdate(){
     for (let i = 1; i < gebl; i++){
     yeash = "saldogebruiker"+i;
@@ -20,7 +20,7 @@ function gebupdate(){
 
 
 
-
+//dit maakt de gebruikers saldo text aan als de pagina word geladen
 function makeuser(){
     for (let i = 1; i < gebl; i++){
         const stuurgeb = document.createElement("h1");
@@ -38,7 +38,7 @@ function storten(){
     var number = parseInt(document.getElementById("number").value);
     const stuur = document.createElement("li");
     stuur.innerText = geb+" Storten:€"+number;
-    document.body.appendChild(stuur);
+    document.getElementById("actie").appendChild(stuur);
     x = "s";
     saldof();
 }
@@ -51,11 +51,11 @@ function opnemen(){
     //dit is voor als er meer geld probeer word opgenomen dan dat er is
     if(saldo2 < number){
         stuur.innerText = " Te weinig geld om op te nemen";
-        document.body.appendChild(stuur);
+        document.getElementById("actie").appendChild(stuur);
     }
     else{
     stuur.innerText = geb+" Opnemen:€"+number;
-    document.body.appendChild(stuur);
+    document.getElementById("actie").appendChild(stuur);
     x = "o";
     saldof();
     }
