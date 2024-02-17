@@ -6,7 +6,7 @@ var saldo2 = 0;
 var number = parseInt(document.getElementById("number").value);
 
 
-setInterval(gebupdate, 10);
+// setInterval(gebupdate, 10);
 
 //dit is de update functie die bijhoud welke gebruiker geselecteerd is en weizigd op basis van dat de display style van de h1 tags
 function gebupdate(){
@@ -28,6 +28,7 @@ function makeuser(){
         stuurgeb.innerText = "Huidig Saldo: €";
         document.getElementById("users").appendChild(stuurgeb);
     }
+    gebupdate();
 }
 
 
